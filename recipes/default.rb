@@ -21,6 +21,8 @@ template '/etc/mongod.conf' do
   mode '0755'
   owner 'root'
   group 'root'
+  variables(proxy_port: node['mongod']['proxy_port'],
+    ip_traffic: node['mongod']['ip_traffic'])
 end
 
 template '/lib/systemd/system/mongod.service' do

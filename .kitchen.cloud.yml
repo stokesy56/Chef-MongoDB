@@ -1,4 +1,3 @@
----
 driver:
   name: ec2
   region: eu-west-1
@@ -20,8 +19,8 @@ driver:
 #  network:
 #    - ["forwarded_port", {guest: 80, host: 8080}]
 
-provisioner:
-  name: chef_zero
+#provisioner:
+  #name: chef_zero
 
   ## product_name and product_version specifies a specific Chef product and version to install.
   ## see the Chef documentation for more details: https://docs.chef.io/config_yml_kitchen.html
@@ -39,6 +38,8 @@ platforms:
 
 suites:
   - name: default
+    run_list:
+      - recipe[node::default]
     verifier:
       inspec_tests:
         - test/integration/default

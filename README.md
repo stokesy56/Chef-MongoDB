@@ -1,4 +1,4 @@
-# Mongo Cookbook :man_cook: :fried_egg: :carrot: :avocado: :red_grape:
+# Mongo Cookbook :man_cook: :fried_egg: :carrot: :avocado: :peach:
 
 This is a cookbook for MongoDB
 
